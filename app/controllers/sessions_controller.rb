@@ -4,7 +4,12 @@ class SessionsController < ApplicationController
     render :new
   end
 
-  def index
+  def hello
+    if !logged_in?
+      redirect_to '/login'
+    else
+      @name = name
+    end
   end
 
   def create
