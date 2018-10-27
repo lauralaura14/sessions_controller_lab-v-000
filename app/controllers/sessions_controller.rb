@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
       session.delete :name
     else
       session[:name] = nil
+    end
   end
 
 end
