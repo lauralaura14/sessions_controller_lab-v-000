@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         session[:name] = params[:name]
         redirect_to '/'
       else
-        redirect_to 'new'
+        redirect_to (controller: 'sessions', action: 'new')
       end
   end
 
