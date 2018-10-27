@@ -4,14 +4,6 @@ class SessionsController < ApplicationController
     render :new
   end
 
-  def hello
-    if !logged_in?
-      redirect_to '/login'
-    else
-      @name = name
-    end
-  end
-
   def create
       if !params[:name].nil?
         session[:name] = params[:name]
